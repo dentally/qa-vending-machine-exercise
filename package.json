@@ -1,0 +1,13 @@
+{
+  "name": "vending-machine",
+  "private": true,
+  "description": "QA technical exercise — npm scripts run in javascript/",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "test": "npm test --prefix javascript",
+    "start": "npm start --prefix javascript",
+    "install": "npm install --prefix javascript"
+  }
+}

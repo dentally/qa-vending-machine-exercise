@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Mocha: all tests",
+      "program": "${workspaceFolder}/javascript/node_modules/mocha/bin/mocha.js",
+      "args": ["--timeout", "0"],
+      "cwd": "${workspaceFolder}/javascript",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Mocha: current file",
+      "program": "${workspaceFolder}/javascript/node_modules/mocha/bin/mocha.js",
+      "args": ["--timeout", "0", "${relativeFile}"],
+      "cwd": "${workspaceFolder}/javascript",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Mocha: current file (grep)",
+      "program": "${workspaceFolder}/javascript/node_modules/mocha/bin/mocha.js",
+      "args": [
+        "--timeout",
+        "0",
+        "${relativeFile}",
+        "--grep",
+        "${input:testName}"
+      ],
+      "cwd": "${workspaceFolder}/javascript",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "testName",
+      "type": "promptString",
+      "description": "Mocha --grep pattern (part of the test name)",
+      "default": ""
+    }
+  ]
+}

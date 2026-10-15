@@ -1,0 +1,22 @@
+{
+  "name": "vending-machine-qa-exercise",
+  "version": "1.0.0",
+  "description": "QA technical exercise: a vending machine and its test suite",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node src/index.js"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "chai": "^4.4.1",
+    "mocha": "^11.3.0"
+  }
+}
